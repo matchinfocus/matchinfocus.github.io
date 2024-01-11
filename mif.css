@@ -103,5 +103,8 @@ a.days:hover, a.days:active { background-color:black }
 .footer a:visited { text-decoration:none; color:#ffffff }
 .footer a:hover { color: #000000; text-decoration:none; background-color:#ECECFF }
 .copy { position:relative; margin:0 auto; width:190px; padding:0 4px; text-align:center; color:white; background-color:black; border-radius:8px }
+.img { height:80px }
 @media screen and (max-width: 686px) {
 .if { height:568px; } }
+@media screen and (max-width: 400px) {
+.img { height:60px }
