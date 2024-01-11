@@ -60,7 +60,7 @@ z-index:1; bottom:100%; left:50%; margin-left:-22px }
 .site6 { max-width:600px; text-align:center; margin:auto }
 .site7 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
 .site8 { max-width:272px; text-align:center; margin:auto }
-.site9 { max-width:416px; text-align:center; margin:auto }
+.site9 { max-width:336px; text-align:center; margin:auto }
 .data { float:left; width:180px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
 padding:2px 0 0 0 }
 .data1 { float:left; width:160px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
@@ -93,9 +93,9 @@ a.p5:hover, a.p5:active { background-color:black }
          line-height:100%; border-radius:10px }
 a.match:link, a.match:visited { width:100%; padding:6px 0; margin:0px; background-color:green; color:white; text-decoration:none; display:inline-block }
 a.match:hover, a.p5:active { background-color:black }
-.days { float:left; width:200px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
+.days { float:left; width:160px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
          line-height:100%; border-radius:10px }
-a.days:link, a.days:visited { width:200px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
+a.days:link, a.days:visited { width:160px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
 a.days:hover, a.days:active { background-color:black }
 .footer { width:100%; padding:10px 0; margin-top:4px; margin-bottom:0px; background-color:#00008B; color:white; font-size:15px; text-align:center; 
         border-top:2px solid red }
@@ -107,4 +107,6 @@ a.days:hover, a.days:active { background-color:black }
 @media screen and (max-width: 686px) {
 .if { height:568px; } }
 @media screen and (max-width: 400px) {
-.img { height:60px }
+.img { height:60px } }
+@media screen and (max-width: 338px) {
+.days { float:none } 
