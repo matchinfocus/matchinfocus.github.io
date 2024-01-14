@@ -1,19 +1,488 @@
 <!DOCTYPE html>
 <head>
-<title>Match In Focus - Match 2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" href="favicon.png">
-<link type="text/css" rel="stylesheet" href="mif.css">
+<style>
+body { font-family:Arial, Helvetica, sans-serif; font-size:16px; background-color:#B5FFB3 }
+.dist { height:15px; background-color:#B5FFB3 }
+.text { max-width:800px; background-color:#FFFFFF; margin:auto; padding:8px 8px 2px 8px; border:2px solid #98FB98; border-radius:10px }
+.text1 { max-width:700px; background-color:#FFFFFF; margin:auto; padding:8px; border:2px solid #98FB98; border-radius:10px }
+.tt { position:relative; display:inline-block }
+.tt .ttex { visibility:hidden; width:90px; background-color:black; color:#fff; text-align:center; font-size:14px; border-radius:6px; padding:2px 0; position:absolute; 
+z-index:1; bottom:100%; left:50%; margin-left:-22px }
+.tt:hover .ttex { visibility:visible }
+.ce { text-align:center; font-weight:bold }
+.p1 { width:98%; margin:auto; text-align:center; font-weight:bold }
+.p1:hover { background-color:#90EE90 }
+.p2 { width:96%; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
+.p3 { text-align:left }
+.s1 { background-color:#00008B; color:white; padding: 2px 22px }
+.sm { font-size:14px }
+.sm1 { font-size:17px }
+.bg { font-size:25px; }
+.tab1 { table-layout:fixed; width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
+.tab1 td { width:10%; line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
+.tr1 { font-weight:bold; background-color:green; color:white; border: 1px solid white }
+.td1 { background-color:#90EE90; border:1px solid white }
+.td2 { background-color:green; color:white; border: 1px solid white }
+.tab2 { width:200px; margin-left:auto; margin-right:auto; text-align:center }
+.tab3 { width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
+.tab3 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
+.td3 { background-color:#98FB98; width:28%; border: 1px solid white }
+.td4 { background-color:#98FB98; width:9%; border: 1px solid white }
+.tab4 { width:98%; max-width:700px; margin-top:-22px; margin-left:auto; margin-right:auto; margin-bottom:-12px; text-align:center }
+.tab4 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; border:1px solid #FAA0A0 }
+.td5 { background-color:green; color:white; border:1px solid white; width:38px }
+.td6 { background-color:green; color:white; border:1px solid white; width:88px }
+.td7 { background-color:#90EE90; border:1px solid white; width:22px }
+.td8 { border: 1px solid red }
+.td9 { background-color:#36454F; color:white; font-weight:bold }
+.td10 { background-color:black; color:white; font-weight:bold }
+.td11 { background-color:green; color:white; border:1px solid white; width:28px }
+.td12 { background-color:#36454F; color:white }
+.td13 { background-color:black; color:white }
+.td14 { background-color:#AFEEEE }
+.tr2 { background-color:#AFEEEE }
+.btn btn-info { background-color:#ffffff; padding:0 4px -3px 4px; margin:0px; color:#000000; border:none; font-weight:bold }
+.left { float:left; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
+.right { float:right; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
+.top { width:100%; padding:10px 0; margin-bottom:15px; background-color:#00008B; color:white; text-align:center; border-radius:10px }
+.top1 { width:100%; padding:7px 0; margin-bottom:4px; background-color:#00008B; color:white; font-weight:bold; font-size:22px; text-align:center; line-height:110%;
+        border-bottom:2px solid red }
+.bot { width:100%; padding:10px 0 5px 10px; margin-top:18px; background-color:#00008B; color:white }
+.tabtop { width:98%; max-width:600px; margin-left:auto; margin-right:auto; text-align:center }
+.d1 { height:10px }
+.d2 { height:4px }
+.d3 { height:25px }
+.d4 { height:15px }
+.p4 { width:200px; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
+.site { max-width:490px; text-align:center; margin:auto }
+.site1 { max-width:640px; text-align:center; margin:auto }
+.site2 { max-width:374px; text-align:center; margin:auto }
+.site3 { max-width:234px; text-align:center; margin:auto }
+.site4 { max-width:638px; text-align:center; margin:auto }
+.site5 { max-width:630px; text-align:center; margin:auto }
+.site6 { max-width:600px; text-align:center; margin:auto }
+.site7 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
+.site8 { max-width:272px; text-align:center; margin:auto }
+.site9 { max-width:336px; text-align:center; margin:auto }
+.data { float:left; width:180px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data1 { float:left; width:160px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data2 { float:left; width:70px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data3 { float:left; width:120px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data4 { float:left; width:96px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data5 { float:left; width:214px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.data6 { float:left; width:140px; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; 
+padding:2px 0 0 0 }
+.tab5 { width:100%; color:black }
+.tab5 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle }
+.td14 { width:62px; background-color:#AFEEEE }
+.td15 { width:62px; background-color:white }
+.td16 { width:130px; background-color:#AFEEEE }
+.td17 { width:50px; background-color:white }
+.links { float:left; width:100px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
+.links1 { float:left; width:166px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
+.p5 { width:45px; text-align:center; margin-top:-3px; padding:2px 0 0 0; border-radius:8px }
+a.p5:link, a.p5:visited { background-color:green; color:white; text-decoration:none; display:inline-block }
+a.p5:hover, a.p5:active { background-color:black }
+.clearfix::after { content:""; clear:both; display:table }
+.if { height:560px; max-width:880px; width:100%; margin-left:auto; margin-right:auto; border-radius:4px }
+.center { max-width:395px; margin-left: auto; margin-right:auto; border:1px solid #98FB98; text-align:center }
+.match { width:98%; max-width:360px; padding:0; margin:10px auto; background-color:green; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.match:link, a.match:visited { width:100%; padding:6px 0; margin:0px; background-color:green; color:white; text-decoration:none; display:inline-block }
+a.match:hover, a.p5:active { background-color:black }
+.days { float:left; width:160px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.days:link, a.days:visited { width:160px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
+a.days:hover, a.days:active { background-color:black }
+.footer { width:100%; padding:10px 0; margin-top:4px; margin-bottom:0px; background-color:#00008B; color:white; font-size:15px; text-align:center; 
+        border-top:2px solid red }
+.footer a { color:#ffffff; text-align:center; padding:2px 6px; text-decoration: none; line-height:100%; border-radius:8px }
+.footer a:visited { text-decoration:none; color:#ffffff }
+.footer a:hover { color: #000000; text-decoration:none; background-color:#ECECFF }
+.copy { position:relative; margin:0 auto; width:190px; padding:0 4px; text-align:center; color:white; background-color:black; border-radius:8px }
+.img { height:80px }
+.hb { position:absolute; top:84px; right:2px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
+        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
+.hb1 { position:relative; margin-left:100%; right:64px; bottom:115px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
+        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
+.hb a, .hb1 a { color:#f2f2f2; padding:4px 8px; text-decoration:none; font-size:17px; border-radius:6px }
+.hb a:hover, .hb1 a:hover { background-color:#ddd; color:black }
+.hb a.active, .hb1 a.active { background-color:#99CCFF; color:black }
+@media screen and (max-width: 686px) {
+.if { height:568px; } }
+@media screen and (max-width: 400px) {
+.img { height:60px } }
+@media screen and (max-width: 338px) {
+.days { float:none } }
+</style>
 </head>
 <body>
 
-<!-- START added part  -->
+<div class='hb'><a href='index.html'>Back</a></div>
+<div class='top1'>
+<table class='tabtop'>
+<tr><td><img class='img' src='https://live.staticflickr.com/65535/53450641051_d0108ffc41_w.jpg' /></td>
+<td><span class='bg'>M</span>atch <span class='bg'>I</span>n <span class='bg'>F</span>ocus<br><span class='sm1'>Sunday, 14 Jan 2024</span></td>
+<td><img class='img' src='https://live.staticflickr.com/65535/53450641041_b6266e9c82_w.jpg' /></td></tr>
+</table>
+</div>
 
-<!-- END added part  -->
+<div class='text'>
 
+<div class='top'>
+<b>Everton - Aston Villa</b><br>England &nbsp;&nbsp; Premier League &nbsp;&nbsp; @ 15:00 CET
+</div>
+
+<p class='p2'>Lines and Odds / Competition Standings</p><div class='d1'></div>
+
+<div class='site7'>
+
+<div class='links1'>
+Lines and Odds<br>
+<a class='p5' href='https://www.oddsportal.com/football/england/premier-league/everton-aston-villa-466Tctus/#1X2;2'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/premier-league/everton-aston-villa-466Tctus/#1X2;2' target='_blank'>Out</a>
+</div>
+
+<div class='links1'>
+Standings<br>
+<a class='p5' href='https://www.oddsportal.com/football/england/premier-league/standings/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/premier-league/standings/' target='_blank'>Out</a>
+</div>
+
+<div class='clearfix'></div>
+</div>
+
+<div class='d1'></div>
+<p class='p2'>Previous Matches of Both Teams</p><div class='d1'></div>
+
+<div class='site7'>
+
+<div class='links1'>
+Home Team<br>
+<a class='p5' href='https://www.oddsportal.com/search/results/:KluSTr9s/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:KluSTr9s/' target='_blank'>Out</a>
+</div>
+
+<div class='links1'>
+Away Team<br>
+<a class='p5' href='https://www.oddsportal.com/search/results/:W00wmLO0/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:W00wmLO0/' target='_blank'>Out</a>
+</div>
+
+<div class='clearfix'></div>
+</div>
+
+<div class='d1'></div>
+<p class='p2'>Head to Head, Form, Streaks / Team Stats</p><div class='d1'></div>
+
+<div class='site7'>
+
+<div class='links1'>
+H to H, Form, Streaks<br>
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/Show/England-Premier-League-2023-2024-Everton-Aston-Villa'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/Show/England-Premier-League-2023-2024-Everton-Aston-Villa' target='_blank'>Out</a>
+</div>
+
+<div class='links1'>
+H to H Stats<br>
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/TeamStatistics/England-Premier-League-2023-2024-Everton-Aston-Villa'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/TeamStatistics/England-Premier-League-2023-2024-Everton-Aston-Villa' target='_blank'>Out</a>
+</div>
+
+<div class='links1'>
+Home T. Stats<br>
+<a class='p5' href='https://www.whoscored.com/Teams/31/Show/England-Everton'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/31/Show/England-Everton' target='_blank'>Out</a>
+</div>
+
+<div class='links1'>
+Away T. Stats<br>
+<a class='p5' href='https://www.whoscored.com/Teams/24/Show/England-Aston-Villa'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/24/Show/England-Aston-Villa' target='_blank'>Out</a>
+</div>
+
+<div class='clearfix'></div>
+</div>
+
+<div class='d1'></div>
+<p class='p2'>Website Previews</p><div class='d1'></div>
+
+<div class='d1'></div>
+<div class='p4'>Club Elo</div>
+
+<div class='site4'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='http://clubelo.com/Everton/AstonVilla'>In</a>
+<a class='p5' href='http://clubelo.com/Everton/AstonVilla' target='_blank'>Out</a>
+</div>
+
+<div class='data6'>Elo Ratings
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>1721.1</td><td class='td15'>1854.1</td></tr>
+</table>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>28.4</td><td class='td15'>26.9</td><td class='td15'>44.7</td></tr>
+</table>
+</div>
+
+<div class='data'>Expected Goals
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Total</td></tr>
+<tr><td class='td15'>1.16</td><td class='td15'>1.52</td><td class='td15'>2.68</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Soccer Rating</div>
+
+<div class='site1'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.soccer-rating.com/Everton-FC/211/'>In</a>
+<a class='p5' href='https://www.soccer-rating.com/Everton-FC/211/' target='_blank'>Out</a>
+</div>
+
+<div class='data1'>Team Ratings (H/A)
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>2288.10</td><td class='td15'>2308.68</td></tr>
+</table>
+</div>
+
+<div class='data1'>Fair Odds
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>2.83</td><td class='td15'>2.52</td></tr>
+</table>
+</div>
+
+<div class='data'>Prediction
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Bet Tip</td></tr>
+<tr><td class='td15'>1/10</td><td class='td15'>5/10</td><td class='td15'>2</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Sofa Score</div>
+
+<div class='site2'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.sofascore.ro/everton-aston-villa/PY#id:11352324'>In</a>
+<a class='p5' href='https://www.sofascore.ro/everton-aston-villa/PY#id:11352324' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Predictions in %
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>19</td><td class='td15'>21</td><td class='td15'>60</td></tr>
+</table>
+</div>
+
+<div class='data2'>Voters
+<table class='tab5'>
+<tr><td class='td15'>30,721</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Fore Bet</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-everton-aston-villa-1920324'>In</a>
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-everton-aston-villa-1920324' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>25</td><td class='td15'>21</td><td class='td15'>54</td></tr>
+</table>
+</div>
+
+<div class='data'>Predictions
+<table class='tab5'>
+<tr><td class='td16'>Bet Tip</td><td class='td17'>2</td></tr>
+<tr><td class='td16'>Correct Score</td><td class='td17'>1:3</td></tr>
+<tr><td class='td16'>Avg. Goals</td><td class='td17'>3.50</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Who Scored</div>
+
+<div class='site3'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/Preview/England-Premier-League-2023-2024-Everton-Aston-Villa'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1729447/Preview/England-Premier-League-2023-2024-Everton-Aston-Villa' target='_blank'>Out</a>
+</div>
+
+<div class='data3'>Prediction
+<table class='tab5'>
+<tr><td class='td14'>Correct Score</td></tr>
+<tr><td class='td15'>1:2</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Win Draw Win</div>
+
+<div class='site8'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.windrawwin.com/tips/england-premier-league/everton-v-aston-villa/727767/'>In</a>
+<a class='p5' href='https://www.windrawwin.com/tips/england-premier-league/everton-v-aston-villa/727767/' target='_blank'>Out</a>
+</div>
+
+<div class='data1'>Prediction
+<table class='tab5'>
+<tr><td class='td14'>Score</td><td class='td14'>Stake</td></tr>
+<tr><td class='td15'>0:1</td><td class='td15'>Large</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Pronostics Football 365</div>
+
+<div class='site5'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://pronosticsfootball365.com/pronostics-football-aujourdhui/'>In</a>
+<a class='p5' href='https://pronosticsfootball365.com/pronostics-football-aujourdhui/' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>26</td><td class='td15'>32</td><td class='td15'>42</td></tr>
+</table>
+</div>
+
+<div class='data5'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Over 1.5</td><td class='td14'>Over 2.5</td><td class='td14'>Over 3.5</td><td class='td14'>BTTS Yes</td></tr>
+<tr><td class='td15'>80</td><td class='td15'>56</td><td class='td15'>31</td><td class='td15'>59</td></tr>
+</table>
+</div>
+
+<div class='data4'>Prediction
+<table class='tab5'>
+<tr><td class='td14'>Bet Tip</td></tr>
+<tr><td class='td15'>X2</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<div class='p4'>Sports Mole</div>
+
+<div class='site6'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.sportsmole.co.uk/football/premier-league/everton-vs-aston-villa_game_176212.html#DataAnalysis'>In</a>
+<a class='p5' href='https://www.sportsmole.co.uk/football/premier-league/everton-vs-aston-villa_game_176212.html#DataAnalysis' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
+<tr><td class='td15'>29.64</td><td class='td15'>24.78</td><td class='td15'>45.57</td></tr>
+</table>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab5'>
+<tr><td class='td14'>Over<br>2.5</td><td class='td14'>Over<br>3.5</td><td class='td14'>BTTS<br>Yes</td></tr>
+<tr><td class='td15'>53.3</td><td class='td15'>31.04</td><td class='td15'>56.18</td></tr>
+</table>
+</div>
+
+<div class='data4'>Prediction
+<table class='tab5'>
+<tr><td class='td14'>Score</td></tr>
+<tr><td class='td15'>1:2</td></tr>
+</table>
+</div>
+
+<div class='clearfix'></div>
+
+</div>
+
+<div class='d4'></div>
+<p class='sm'>Click on any 'Open in Site' button to see the analysis of this match in more detail and the write-up (if any) in that particular website.
+The <b>'In' button</b> will open the site in the same window of the browser and the <b>'Out' button</b> will open the site in a new window in the browser.</p><div class='d1'></div>
+<p class='p2'>Lineups / Players / Missing Players</p>
+
+<iframe class='if' id='sofa-lineups-embed-11352324' src='https://widgets.sofascore.com/embed/lineups?id=11352324&widgetBackground=Gray&v=2' frameborder='0' scrolling='no'></iframe>
+
+<p class='sm'>Click on any player's name to see details about the player.<br>
+Click on the orange 'Possible lineups' to see the most up to date possible lineups and the players who may be missing in this match.</p>
+
+</div>
+
+<div class='footer'>
+<a href='/legal/terms.html'>Terms/Conditions</a> <a href='/legal/privacy.html'>Privacy</a>
+<a href='/legal/cookies.html'>Cookies</a> <a href='/legal/disclaimer.html'>Disclaimer</a><br>
+<a href='#' id='open_preferences_center'>Update cookies preferences</a>
+<div class='d1'></div>
+<div class='copy'>&copy; 2024 &nbsp;&nbsp;Match In Focus</div>
+</div>
+
+<div class='hb1'><a href='index.html'>Back</a></div>
 </body>
-</html>
+<html/>
