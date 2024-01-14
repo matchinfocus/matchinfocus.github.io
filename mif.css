@@ -111,9 +111,12 @@ a.days:hover, a.days:active { background-color:black }
 .hb a, .hb1 a { color:#f2f2f2; padding:4px 8px; text-decoration:none; font-size:17px; border-radius:6px }
 .hb a:hover, .hb1 a:hover { background-color:#ddd; color:black }
 .hb a.active, .hb1 a.active { background-color:#99CCFF; color:black }
+.infooter { width:100%; background-color:#00008B; text-align:center }
 @media screen and (max-width: 686px) {
 .if { height:568px; } }
 @media screen and (max-width: 400px) {
 .img { height:60px } }
 @media screen and (max-width: 338px) {
 .days { float:none } }
+@media screen and (max-width: 360px) {
+.infooter { width:226px; margin:auto } }
