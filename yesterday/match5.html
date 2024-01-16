@@ -1,23 +1,127 @@
 <!DOCTYPE html>
 <head>
-<title>Match In Focus - Match 5</title>        
+<title>Match In Focus - Match 5</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png"  href="favicon.png">
-<link type="text/css" rel="stylesheet" href="mif.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png"  href="/favicon.png">
+<style>
+body { font-family:Arial, Helvetica, sans-serif; font-size:16px; background-color:#B5FFB3 }
+.dist { height:15px; background-color:#B5FFB3 }
+.text { max-width:800px; background-color:#FFFFFF; margin:auto; padding:8px 8px 2px 8px; border:2px solid #98FB98; border-radius:10px }
+.text1 { max-width:700px; background-color:#FFFFFF; margin:auto; padding:8px; border:2px solid #98FB98; border-radius:10px }
+.tt { position:relative; display:inline-block }
+.tt .ttex { visibility:hidden; width:90px; background-color:black; color:#fff; text-align:center; font-size:14px; border-radius:6px; padding:2px 0; position:absolute; 
+z-index:1; bottom:100%; left:50%; margin-left:-22px }
+.tt:hover .ttex { visibility:visible }
+.ce { text-align:center; font-weight:bold }
+.p1 { width:98%; margin:auto; text-align:center; font-weight:bold }
+.p1:hover { background-color:#90EE90 }
+.p2 { width:96%; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
+.p3 { text-align:left }
+.s1 { background-color:#00008B; color:white; padding: 2px 22px }
+.sm { font-size:14px }
+.sm1 { font-size:17px }
+.bg { font-size:25px; }
+.tab1 { table-layout:fixed; width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
+.tab1 td { width:10%; line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
+.tr1 { font-weight:bold; background-color:green; color:white; border: 1px solid white }
+.td1 { background-color:#90EE90; border:1px solid white }
+.td2 { background-color:green; color:white; border: 1px solid white }
+.tab2 { width:200px; margin-left:auto; margin-right:auto; text-align:center }
+.tab3 { width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
+.tab3 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
+.td3 { background-color:#98FB98; width:28%; border: 1px solid white }
+.td4 { background-color:#98FB98; width:9%; border: 1px solid white }
+.tab4 { width:98%; max-width:700px; margin-top:-22px; margin-left:auto; margin-right:auto; margin-bottom:-12px; text-align:center }
+.tab4 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; border:1px solid #FAA0A0 }
+.td5 { background-color:green; color:white; border:1px solid white; width:38px }
+.td6 { background-color:green; color:white; border:1px solid white; width:88px }
+.td7 { background-color:#90EE90; border:1px solid white; width:22px }
+.td8 { border: 1px solid red }
+.td9 { background-color:#36454F; color:white; font-weight:bold }
+.td10 { background-color:black; color:white; font-weight:bold }
+.td11 { background-color:green; color:white; border:1px solid white; width:28px }
+.td12 { background-color:#36454F; color:white }
+.td13 { background-color:black; color:white }
+.td14 { background-color:#AFEEEE }
+.tr2 { background-color:#AFEEEE }
+.btn btn-info { background-color:#ffffff; padding:0 4px -3px 4px; margin:0px; color:#000000; border:none; font-weight:bold }
+.left { float:left; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
+.right { float:right; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
+.top { width:100%; padding:10px 0; margin-bottom:15px; background-color:#00008B; color:white; text-align:center; border-radius:10px }
+.top1 { width:100%; padding:7px 0; margin-bottom:4px; background-color:#00008B; color:white; font-weight:bold; font-size:22px; text-align:center; line-height:110%;
+        border-bottom:2px solid red }
+.bot { width:100%; padding:10px 0 5px 10px; margin-top:18px; background-color:#00008B; color:white }
+.tabtop { width:98%; max-width:600px; margin-left:auto; margin-right:auto; text-align:center }
+.d1 { height:10px }
+.d2 { height:4px }
+.d3 { height:25px }
+.d4 { height:15px }
+.p4 { width:200px; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
+.site { max-width:796px; text-align:center; margin:auto }
+.site1 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
+.data, .data1, .data2, .data3, .data4, .data5, .data6 { display:inline-block; vertical-align:middle; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; padding:2px 0 0 0 }
+.data { width:180px }
+.data1 { width:160px }
+.data2 { width:70px }
+.data3 { width:120px }
+.data4 { width:96px }
+.data5 { width:214px }
+.data6 { width:140px }
+.tab5 { width:100%; color:black }
+.tab5 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle }
+.td14 { width:62px; background-color:#AFEEEE }
+.td15 { width:62px; background-color:white }
+.td16 { width:130px; background-color:#AFEEEE }
+.td17 { width:50px; background-color:white }
+.links { display:inline-block; vertical-align:middle; width:100px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
+.links1 { float:left; width:166px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
+.p5 { width:45px; text-align:center; margin-top:-3px; padding:2px 0 0 0; border-radius:8px }
+a.p5:link, a.p5:visited { background-color:green; color:white; text-decoration:none; display:inline-block }
+a.p5:hover, a.p5:active { background-color:black }
+.clearfix::after { content:""; clear:both; display:table }
+.if { height:560px; max-width:880px; width:100%; margin-left:auto; margin-right:auto; border-radius:4px }
+.center { max-width:395px; margin-left: auto; margin-right:auto; border:1px solid #98FB98; text-align:center }
+.match { width:98%; max-width:360px; padding:0; margin:10px auto; background-color:green; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.match:link, a.match:visited { width:100%; padding:6px 0; margin:0px; background-color:green; color:white; text-decoration:none; display:inline-block }
+a.match:hover, a.p5:active { background-color:black }
+.days { float:left; width:160px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.days:link, a.days:visited { width:160px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
+a.days:hover, a.days:active { background-color:black }
+.footer { width:100%; padding:10px 0; margin-top:4px; margin-bottom:0px; background-color:#00008B; color:white; font-size:15px; text-align:center; 
+        border-top:2px solid red }
+.footer a { color:#ffffff; text-align:center; padding:2px 6px; text-decoration: none; line-height:100%; border-radius:8px }
+.footer a:visited { text-decoration:none; color:#ffffff }
+.footer a:hover { color: #000000; text-decoration:none; background-color:#ECECFF }
+.copy { position:relative; margin:0 auto; width:190px; padding:0 4px; text-align:center; color:white; background-color:black; border-radius:8px }
+.img { height:80px }
+.hb { position:absolute; top:84px; right:2px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
+        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
+.hb1 { position:relative; margin-left:100%; right:64px; bottom:115px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
+        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
+.hb a, .hb1 a { color:#f2f2f2; padding:4px 8px; text-decoration:none; font-size:17px; border-radius:6px }
+.hb a:hover, .hb1 a:hover { background-color:#ddd; color:black }
+.hb a.active, .hb1 a.active { background-color:#99CCFF; color:black }
+@media screen and (max-width: 686px) {
+.if { height:568px; } }
+@media screen and (max-width: 400px) {
+.img { height:60px } }
+@media screen and (max-width: 338px) {
+.days { float:none } }
+</style>
 </head>
 <body>
-
-         <!--  ********** START ADDED PART *********  -->
 
 <div class='hb'><a href='index.html'>Back</a></div>
 <div class='top1'>
 <table class='tabtop'>
 <tr><td><img class='img' src='https://live.staticflickr.com/65535/53450641051_d0108ffc41_w.jpg' /></td>
-<td><span class='bg'>M</span>atch <span class='bg'>I</span>n <span class='bg'>F</span>ocus<br><span class='sm1'>Sunday, 14 Jan 2024</span></td>
+<td><span class='bg'>M</span>atch <span class='bg'>I</span>n <span class='bg'>F</span>ocus<br><span class='sm1'>Monday, 15 Jan 2024</span></td>
 <td><img class='img' src='https://live.staticflickr.com/65535/53450641041_b6266e9c82_w.jpg' /></td></tr>
 </table>
 </div>
@@ -25,23 +129,23 @@
 <div class='text'>
 
 <div class='top'>
-<b>Lens - Paris SG</b><br>France &nbsp;&nbsp; Ligue 1 &nbsp;&nbsp; @ 20:45 CET
+<b>Derby - Burton</b><br>England &nbsp;&nbsp; League One &nbsp;&nbsp; @ 21:00 CET
 </div>
 
 <p class='p2'>Lines and Odds / Competition Standings</p><div class='d1'></div>
 
-<div class='site7'>
+<div class='site1'>
 
 <div class='links1'>
 Lines and Odds<br>
-<a class='p5' href='https://www.oddsportal.com/football/france/ligue-1/lens-psg-C4km7Khr/#1X2;2'>In</a>
-<a class='p5' href='https://www.oddsportal.com/football/france/ligue-1/lens-psg-C4km7Khr/#1X2;2' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/league-one/derby-burton-6kem39Bi/#1X2;2'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/league-one/derby-burton-6kem39Bi/#1X2;2' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Standings<br>
-<a class='p5' href='https://www.oddsportal.com/football/france/ligue-1/standings/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/football/france/ligue-1/standings/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/league-one/standings/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/england/league-one/standings/' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -50,18 +154,18 @@ Standings<br>
 <div class='d1'></div>
 <p class='p2'>Previous Matches of Both Teams</p><div class='d1'></div>
 
-<div class='site7'>
+<div class='site1'>
 
 <div class='links1'>
 Home Team<br>
-<a class='p5' href='https://www.oddsportal.com/search/results/:IBmris38/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/search/results/:IBmris38/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:Iug0YO0Q/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:Iug0YO0Q/' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Away Team<br>
-<a class='p5' href='https://www.oddsportal.com/search/results/:CjhkPw0k/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/search/results/:CjhkPw0k/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:nwCtJaJT/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:nwCtJaJT/' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -70,30 +174,30 @@ Away Team<br>
 <div class='d1'></div>
 <p class='p2'>Head to Head, Form, Streaks / Team Stats</p><div class='d1'></div>
 
-<div class='site7'>
+<div class='site1'>
 
 <div class='links1'>
 H to H, Form, Streaks<br>
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/Show/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain'>In</a>
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/Show/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/Show/England-League-One-2023-2024-Derby-Burton'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/Show/England-League-One-2023-2024-Derby-Burton' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 H to H Stats<br>
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/TeamStatistics/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain'>In</a>
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/TeamStatistics/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/TeamStatistics/England-League-One-2023-2024-Derby-Burton'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/TeamStatistics/England-League-One-2023-2024-Derby-Burton' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Home T. Stats<br>
-<a class='p5' href='https://www.whoscored.com/Teams/309/Show/France-Lens'>In</a>
-<a class='p5' href='https://www.whoscored.com/Teams/309/Show/France-Lens' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Teams/20/Show/England-Derby'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/20/Show/England-Derby' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Away T. Stats<br>
-<a class='p5' href='https://www.whoscored.com/Teams/304/Show/France-Paris-Saint-Germain'>In</a>
-<a class='p5' href='https://www.whoscored.com/Teams/304/Show/France-Paris-Saint-Germain' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Teams/1786/Show/England-Burton'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/1786/Show/England-Burton' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -105,100 +209,94 @@ Away T. Stats<br>
 <div class='d1'></div>
 <div class='p4'>Club Elo</div>
 
-<div class='site4'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='http://clubelo.com/Lens/ParisSG'>In</a>
-<a class='p5' href='http://clubelo.com/Lens/ParisSG' target='_blank'>Out</a>
+<a class='p5' href='/nodata.html'>In</a>
+<a class='p5' href='/nodata.html' target='_blank'>Out</a>
 </div>
 
 <div class='data6'>Elo Ratings
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>1756.6</td><td class='td15'>1873.0</td></tr>
+<tr><td class='td15'>-</td><td class='td15'>-</td></tr>
 </table>
 </div>
 
 <div class='data'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>29.3</td><td class='td15'>26.8</td><td class='td15'>43.9</td></tr>
+<tr><td class='td15'>-</td><td class='td15'>-</td><td class='td15'>-</td></tr>
 </table>
 </div>
 
 <div class='data'>Expected Goals
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Total</td></tr>
-<tr><td class='td15'>1.21</td><td class='td15'>1.53</td><td class='td15'>2.74</td></tr>
+<tr><td class='td15'>-</td><td class='td15'>-</td><td class='td15'>-</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Soccer Rating</div>
 
-<div class='site1'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.soccer-rating.com/RC-Lens/248/'>In</a>
-<a class='p5' href='https://www.soccer-rating.com/RC-Lens/248/' target='_blank'>Out</a>
+<a class='p5' href='https://www.soccer-rating.com/Burton-Albion/1149/'>In</a>
+<a class='p5' href='https://www.soccer-rating.com/Burton-Albion/1149/' target='_blank'>Out</a>
 </div>
 
 <div class='data1'>Team Ratings (H/A)
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>2245.09</td><td class='td15'>2365.74</td></tr>
+<tr><td class='td15'>2106.79</td><td class='td15'>1737.52</td></tr>
 </table>
 </div>
 
 <div class='data1'>Fair Odds
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>3.94</td><td class='td15'>1.97</td></tr>
+<tr><td class='td15'>1.33</td><td class='td15'>11.11</td></tr>
 </table>
 </div>
 
 <div class='data'>Prediction
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Bet Tip</td></tr>
-<tr><td class='td15'>1/10</td><td class='td15'>5/10</td><td class='td15'>2</td></tr>
+<tr><td class='td15'>6/10</td><td class='td15'>3/10</td><td class='td15'>1</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Sofa Score</div>
 
-<div class='site2'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.sofascore.ro/lens-paris-saint-germain/UHsYH#id:11391403'>In</a>
-<a class='p5' href='https://www.sofascore.ro/lens-paris-saint-germain/UHsYH#id:11391403' target='_blank'>Out</a>
+<a class='p5' href='https://www.sofascore.ro/burton-albion-derby-county/CsJc#id:11889004'>In</a>
+<a class='p5' href='https://www.sofascore.ro/burton-albion-derby-county/CsJc#id:11889004' target='_blank'>Out</a>
 </div>
 
 <div class='data'>Predictions in %
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>14</td><td class='td15'>18</td><td class='td15'>69</td></tr>
+<tr><td class='td15'>76</td><td class='td15'>19</td><td class='td15'>5</td></tr>
 </table>
 </div>
 
 <div class='data2'>Voters
 <table class='tab5'>
-<tr><td class='td15'>25,020</td></tr>
+<tr><td class='td15'>16,284</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
@@ -209,77 +307,71 @@ Open in Site
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.forebet.com/en/predictions-tips-rc-lens-paris-st-germain-1932502'>In</a>
-<a class='p5' href='https://www.forebet.com/en/predictions-tips-rc-lens-paris-st-germain-1932502' target='_blank'>Out</a>
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-derby-county-burton-albion-1938025'>In</a>
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-derby-county-burton-albion-1938025' target='_blank'>Out</a>
 </div>
 
 <div class='data'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>19</td><td class='td15'>34</td><td class='td15'>47</td></tr>
+<tr><td class='td15'>48</td><td class='td15'>30</td><td class='td15'>22</td></tr>
 </table>
 </div>
 
 <div class='data'>Predictions
 <table class='tab5'>
-<tr><td class='td16'>Bet Tip</td><td class='td17'>2</td></tr>
-<tr><td class='td16'>Correct Score</td><td class='td17'>1:2</td></tr>
-<tr><td class='td16'>Avg. Goals</td><td class='td17'>2.75</td></tr>
+<tr><td class='td16'>Bet Tip</td><td class='td17'>1</td></tr>
+<tr><td class='td16'>Correct Score</td><td class='td17'>2:0</td></tr>
+<tr><td class='td16'>Avg. Goals</td><td class='td17'>2.36</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Who Scored</div>
 
-<div class='site3'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/Preview/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain'>In</a>
-<a class='p5' href='https://www.whoscored.com/Matches/1741101/Preview/France-Ligue-1-2023-2024-Lens-Paris-Saint-Germain' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/Preview/England-League-One-2023-2024-Derby-Burton'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1732425/Preview/England-League-One-2023-2024-Derby-Burton' target='_blank'>Out</a>
 </div>
 
 <div class='data3'>Prediction
 <table class='tab5'>
 <tr><td class='td14'>Correct Score</td></tr>
-<tr><td class='td15'>2:3</td></tr>
+<tr><td class='td15'>3:1</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Win Draw Win</div>
 
-<div class='site8'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.windrawwin.com/tips/france-ligue-1/lens-v-psg/740119/'>In</a>
-<a class='p5' href='https://www.windrawwin.com/tips/france-ligue-1/lens-v-psg/740119/' target='_blank'>Out</a>
+<a class='p5' href='https://www.windrawwin.com/tips/england-league-one/derby-v-burton-albion/731845/'>In</a>
+<a class='p5' href='https://www.windrawwin.com/tips/england-league-one/derby-v-burton-albion/731845/' target='_blank'>Out</a>
 </div>
 
 <div class='data1'>Prediction
 <table class='tab5'>
 <tr><td class='td14'>Score</td><td class='td14'>Stake</td></tr>
-<tr><td class='td15'>1:1</td><td class='td15'>Medium</td></tr>
+<tr><td class='td15'>3:0</td><td class='td15'>Large</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Pronostics Football 365</div>
 
-<div class='site5'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
@@ -290,70 +382,68 @@ Open in Site
 <div class='data'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>30</td><td class='td15'>29</td><td class='td15'>41</td></tr>
+<tr><td class='td15'>69</td><td class='td15'>21</td><td class='td15'>10</td></tr>
 </table>
 </div>
 
 <div class='data5'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Over 1.5</td><td class='td14'>Over 2.5</td><td class='td14'>Over 3.5</td><td class='td14'>BTTS Yes</td></tr>
-<tr><td class='td15'>95</td><td class='td15'>73</td><td class='td15'>39</td><td class='td15'>69</td></tr>
+<tr><td class='td15'>84</td><td class='td15'>64</td><td class='td15'>35</td><td class='td15'>46</td></tr>
 </table>
 </div>
 
 <div class='data4'>Prediction
 <table class='tab5'>
 <tr><td class='td14'>Bet Tip</td></tr>
-<tr><td class='td15'>2</td></tr>
+<tr><td class='td15'>1</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <div class='p4'>Sports Mole</div>
 
-<div class='site6'>
+<div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.sportsmole.co.uk/football/lens/preview/preview-lens-vs-psg-prediction-team-news-lineups_533588.html'>In</a>
-<a class='p5' href='https://www.sportsmole.co.uk/football/lens/preview/preview-lens-vs-psg-prediction-team-news-lineups_533588.html' target='_blank'>Out</a>
+<a class='p5' href='https://www.sportsmole.co.uk/football/derby-county/preview/preview-derby-vs-burton-albion-prediction-team-news-lineups_533694.html'>In</a>
+<a class='p5' href='https://www.sportsmole.co.uk/football/derby-county/preview/preview-derby-vs-burton-albion-prediction-team-news-lineups_533694.html' target='_blank'>Out</a>
 </div>
 
 <div class='data'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>29.18</td><td class='td15'>22.62</td><td class='td15'>48.2</td></tr>
+<tr><td class='td15'>70.39</td><td class='td15'>17.65</td><td class='td15'>11.95</td></tr>
 </table>
 </div>
 
 <div class='data'>Probabilities in %
 <table class='tab5'>
 <tr><td class='td14'>Over<br>2.5</td><td class='td14'>Over<br>3.5</td><td class='td14'>BTTS<br>Yes</td></tr>
-<tr><td class='td15'>63.09</td><td class='td15'>40.91</td><td class='td15'>63.53</td></tr>
+<tr><td class='td15'>60.62</td><td class='td15'>38.28</td><td class='td15'>50.86</td></tr>
 </table>
 </div>
 
 <div class='data4'>Prediction
 <table class='tab5'>
 <tr><td class='td14'>Score</td></tr>
-<tr><td class='td15'>1:3</td></tr>
+<tr><td class='td15'>2:0</td></tr>
 </table>
 </div>
-
-<div class='clearfix'></div>
 
 </div>
 
 <div class='d4'></div>
 <p class='sm'>Click on any 'Open in Site' button to see the analysis of this match in more detail and the write-up (if any) in that particular website.
-The <b>'In' button</b> will open the site in the same window of the browser and the <b>'Out' button</b> will open the site in a new window in the browser.</p><div class='d1'></div>
+The <b>'In' button</b> will open the site in the same window of the browser and the <b>'Out' button</b> will open the site in a new window in the browser.</p>
+
+<div class='d1'></div>
 <p class='p2'>Lineups / Players / Missing Players</p>
 
-<iframe class='if' id='sofa-lineups-embed-11391403' src='https://widgets.sofascore.com/embed/lineups?id=11391403&widgetBackground=Gray&v=2' frameborder='0' scrolling='no'></iframe>
+<iframe class='if' id='sofa-lineups-embed-11889004' src='https://widgets.sofascore.com/embed/lineups?id=11889004&widgetBackground=Gray&v=2' frameborder='0' scrolling='no'></iframe>
 
 <p class='sm'>Click on any player's name to see details about the player.<br>
 Click on the orange 'Possible lineups' to see the most up to date possible lineups and the players who may be missing in this match.</p>
@@ -368,8 +458,6 @@ Click on the orange 'Possible lineups' to see the most up to date possible lineu
 <div class='copy'>&copy; 2024 &nbsp;&nbsp;Match In Focus</div>
 </div>
 
-<div class='hb1'><a href='index.html'>Back</a></div>
-
-        <!--  ********** END ADDED PART *********  -->
+<div class='hb1'><a href='/index.html'>Back</a></div>
 </body>
-</html>
+<html/>
