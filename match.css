@@ -44,9 +44,12 @@ a.p5:hover, a.p5:active { background-color:black }
 .site1 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
 .sm { font-size:14px }
 .sm1 { font-size:17px }
-.tab5 { width:100%; color:black }
-.tab5 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle }
+.tab { width:100%; color:black }
+.tab td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle }
+.tab1 { display:inline-block; vertical-align:middle; width:auto; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; border:1px solid blue;         padding:2px 0 0 0 }
+.tab1 td { line-height:100%; padding:4px 5px 2px 5px; vertical-align:middle }
 .tabtop { width:98%; max-width:600px; margin-left:auto; margin-right:auto; text-align:center }
+.td13 { max-width:90px; background-color:#FFFFFF; color:#000000 }
 .td14 { width:62px; background-color:#AFEEEE }
 .td15 { width:62px; background-color:white }
 .td16 { width:130px; background-color:#AFEEEE }
