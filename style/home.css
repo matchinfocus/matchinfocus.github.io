@@ -1,0 +1,33 @@
+body { font-family:Arial, Helvetica, sans-serif; font-size:16px; background-color:#B5FFB3 }
+.bg { font-size:25px; }
+.clearfix::after { content:""; clear:both; display:table }
+.copy { position:relative; margin:0 auto; width:190px; padding:0 4px; text-align:center; color:white; background-color:black; border-radius:8px }
+.d1 { height:10px }
+.days { float:left; width:160px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.days:link, a.days:visited { width:160px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
+a.days:hover, a.days:active { background-color:black }
+@media screen and (max-width: 338px) {
+.days { float:none } }
+.footer { width:100%; padding:10px 0; margin-top:4px; margin-bottom:0px; background-color:#00008B; color:white; font-size:15px; text-align:center; 
+        border-top:2px solid red }
+.footer a { color:#ffffff; text-align:center; padding:2px 6px; text-decoration: none; line-height:100%; border-radius:8px }
+.footer a:visited { text-decoration:none; color:#ffffff }
+.footer a:hover { color: #000000; text-decoration:none; background-color:#ECECFF }
+.img { height:80px }
+@media screen and (max-width: 400px) {
+.img { height:60px } }
+.infooter { width:100%; background-color:#00008B; text-align:center }
+@media screen and (max-width: 360px) {
+.infooter { width:226px; margin:auto } }
+.match { width:98%; max-width:360px; padding:0; margin:10px auto; background-color:green; color:white; font-weight:bold; font-size:18px; text-align:center; 
+         line-height:100%; border-radius:10px }
+a.match:link, a.match:visited { width:100%; padding:6px 0; margin:0px; background-color:green; color:white; text-decoration:none; display:inline-block }
+a.match:hover, a.p5:active { background-color:black }
+.old { max-width:336px; text-align:center; margin:auto }
+.sm { font-size:14px }
+.sm1 { font-size:17px }
+.tabtop { width:98%; max-width:600px; margin-left:auto; margin-right:auto; text-align:center }
+.text1 { max-width:700px; background-color:#FFFFFF; margin:auto; padding:8px; border:2px solid #98FB98; border-radius:10px }
+.top1 { width:100%; padding:7px 0; margin-bottom:4px; background-color:#00008B; color:white; font-weight:bold; font-size:22px; text-align:center; line-height:110%;
+        border-bottom:2px solid red }
