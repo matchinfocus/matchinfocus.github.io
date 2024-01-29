@@ -1,119 +1,14 @@
+
 <!DOCTYPE html>
 <head>
-<title>Match In Focus - Match 2</title> 
+<title>Match In Focus - Match 6</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png"  href="/favicon.png">
-<style>
-body { font-family:Arial, Helvetica, sans-serif; font-size:16px; background-color:#B5FFB3 }
-.dist { height:15px; background-color:#B5FFB3 }
-.text { max-width:800px; background-color:#FFFFFF; margin:auto; padding:8px 8px 2px 8px; border:2px solid #98FB98; border-radius:10px }
-.text1 { max-width:700px; background-color:#FFFFFF; margin:auto; padding:8px; border:2px solid #98FB98; border-radius:10px }
-.tt { position:relative; display:inline-block }
-.tt .ttex { visibility:hidden; width:90px; background-color:black; color:#fff; text-align:center; font-size:14px; border-radius:6px; padding:2px 0; position:absolute; 
-z-index:1; bottom:100%; left:50%; margin-left:-22px }
-.tt:hover .ttex { visibility:visible }
-.ce { text-align:center; font-weight:bold }
-.p1 { width:98%; margin:auto; text-align:center; font-weight:bold }
-.p1:hover { background-color:#90EE90 }
-.p2 { width:96%; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
-.p3 { text-align:left }
-.s1 { background-color:#00008B; color:white; padding: 2px 22px }
-.sm { font-size:14px }
-.sm1 { font-size:17px }
-.bg { font-size:25px; }
-.tab1 { table-layout:fixed; width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
-.tab1 td { width:10%; line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
-.tr1 { font-weight:bold; background-color:green; color:white; border: 1px solid white }
-.td1 { background-color:#90EE90; border:1px solid white }
-.td2 { background-color:green; color:white; border: 1px solid white }
-.tab2 { width:200px; margin-left:auto; margin-right:auto; text-align:center }
-.tab3 { width:98%; max-width:310px; margin-left:auto; margin-right:auto; text-align:center }
-.tab3 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; }
-.td3 { background-color:#98FB98; width:28%; border: 1px solid white }
-.td4 { background-color:#98FB98; width:9%; border: 1px solid white }
-.tab4 { width:98%; max-width:700px; margin-top:-22px; margin-left:auto; margin-right:auto; margin-bottom:-12px; text-align:center }
-.tab4 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle; border:1px solid #FAA0A0 }
-.td5 { background-color:green; color:white; border:1px solid white; width:38px }
-.td6 { background-color:green; color:white; border:1px solid white; width:88px }
-.td7 { background-color:#90EE90; border:1px solid white; width:22px }
-.td8 { border: 1px solid red }
-.td9 { background-color:#36454F; color:white; font-weight:bold }
-.td10 { background-color:black; color:white; font-weight:bold }
-.td11 { background-color:green; color:white; border:1px solid white; width:28px }
-.td12 { background-color:#36454F; color:white }
-.td13 { background-color:black; color:white }
-.td14 { background-color:#AFEEEE }
-.tr2 { background-color:#AFEEEE }
-.btn btn-info { background-color:#ffffff; padding:0 4px -3px 4px; margin:0px; color:#000000; border:none; font-weight:bold }
-.left { float:left; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
-.right { float:right; width:49%; max-width:395px; border:1px solid #98FB98; text-align:center }
-.top { width:100%; padding:10px 0; margin-bottom:15px; background-color:#00008B; color:white; text-align:center; border-radius:10px }
-.top1 { width:100%; padding:7px 0; margin-bottom:4px; background-color:#00008B; color:white; font-weight:bold; font-size:22px; text-align:center; line-height:110%;
-        border-bottom:2px solid red }
-.bot { width:100%; padding:10px 0 5px 10px; margin-top:18px; background-color:#00008B; color:white }
-.tabtop { width:98%; max-width:600px; margin-left:auto; margin-right:auto; text-align:center }
-.d1 { height:10px }
-.d2 { height:4px }
-.d3 { height:25px }
-.d4 { height:15px }
-.p4 { width:200px; margin:auto; text-align:center; font-weight:bold; background-color:#00008B; color:white; padding-top:2px }
-.site { max-width:796px; text-align:center; margin:auto }
-.site1 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
-.data, .data1, .data2, .data3, .data4, .data5, .data6 { display:inline-block; vertical-align:middle; margin:15px 0 0 12px; background-color:green; color:white; font-weight:bold; text-align:center; border:1px solid blue; padding:2px 0 0 0 }
-.data { width:180px }
-.data1 { width:160px }
-.data2 { width:70px }
-.data3 { width:120px }
-.data4 { width:96px }
-.data5 { width:214px }
-.data6 { width:140px }
-.tab5 { width:100%; color:black }
-.tab5 td { line-height:100%; padding:4px 0 2px 0; vertical-align:middle }
-.td14 { width:62px; background-color:#AFEEEE }
-.td15 { width:62px; background-color:white }
-.td16 { width:130px; background-color:#AFEEEE }
-.td17 { width:50px; background-color:white }
-.links { display:inline-block; vertical-align:middle; width:100px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
-.links1 { float:left; width:166px; margin-top:15px; background-color:white; color:#00008B; font-weight:bold; text-align:center }
-.p5 { width:45px; text-align:center; margin-top:-3px; padding:2px 0 0 0; border-radius:8px }
-a.p5:link, a.p5:visited { background-color:green; color:white; text-decoration:none; display:inline-block }
-a.p5:hover, a.p5:active { background-color:black }
-.clearfix::after { content:""; clear:both; display:table }
-.if { height:560px; max-width:880px; width:100%; margin-left:auto; margin-right:auto; border-radius:4px }
-.center { max-width:395px; margin-left: auto; margin-right:auto; border:1px solid #98FB98; text-align:center }
-.match { width:98%; max-width:360px; padding:0; margin:10px auto; background-color:green; color:white; font-weight:bold; font-size:18px; text-align:center; 
-         line-height:100%; border-radius:10px }
-a.match:link, a.match:visited { width:100%; padding:6px 0; margin:0px; background-color:green; color:white; text-decoration:none; display:inline-block }
-a.match:hover, a.p5:active { background-color:black }
-.days { float:left; width:160px; padding:0; margin:10px 4px; background-color:#00008B; color:white; font-weight:bold; font-size:18px; text-align:center; 
-         line-height:100%; border-radius:10px }
-a.days:link, a.days:visited { width:160px; padding:6px 0; margin:0px; background-color:#00008B; color:white; text-decoration:none; display:inline-block }
-a.days:hover, a.days:active { background-color:black }
-.footer { width:100%; padding:10px 0; margin-top:4px; margin-bottom:0px; background-color:#00008B; color:white; font-size:15px; text-align:center; 
-        border-top:2px solid red }
-.footer a { color:#ffffff; text-align:center; padding:2px 6px; text-decoration: none; line-height:100%; border-radius:8px }
-.footer a:visited { text-decoration:none; color:#ffffff }
-.footer a:hover { color: #000000; text-decoration:none; background-color:#ECECFF }
-.copy { position:relative; margin:0 auto; width:190px; padding:0 4px; text-align:center; color:white; background-color:black; border-radius:8px }
-.img { height:80px }
-.hb { position:absolute; top:84px; right:2px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
-        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
-.hb1 { position:relative; margin-left:100%; right:64px; bottom:115px; width:60px; padding:2px 0; background-color:#3A4072; border:2px solid #FF6666;
-        font-family:Arial, Helvetica, sans-serif; text-align:center; border-radius:8px }
-.hb a, .hb1 a { color:#f2f2f2; padding:4px 8px; text-decoration:none; font-size:17px; border-radius:6px }
-.hb a:hover, .hb1 a:hover { background-color:#ddd; color:black }
-.hb a.active, .hb1 a.active { background-color:#99CCFF; color:black }
-@media screen and (max-width: 686px) {
-.if { height:568px; } }
-@media screen and (max-width: 400px) {
-.img { height:60px } }
-@media screen and (max-width: 338px) {
-.days { float:none } }
-</style>
+<link type="text/css" rel="stylesheet" href="/match.css">
 </head>
 <body>
 
@@ -121,7 +16,7 @@ a.days:hover, a.days:active { background-color:black }
 <div class='top1'>
 <table class='tabtop'>
 <tr><td><img class='img' src='https://live.staticflickr.com/65535/53450641051_d0108ffc41_w.jpg' /></td>
-<td><span class='bg'>M</span>atch <span class='bg'>I</span>n <span class='bg'>F</span>ocus<br><span class='sm1'>Monday, 15 Jan 2024</span></td>
+<td><span class='bg'>M</span>atch <span class='bg'>I</span>n <span class='bg'>F</span>ocus<br><span class='sm1'>Monday, 29 January 2024</span></td>
 <td><img class='img' src='https://live.staticflickr.com/65535/53450641041_b6266e9c82_w.jpg' /></td></tr>
 </table>
 </div>
@@ -129,7 +24,7 @@ a.days:hover, a.days:active { background-color:black }
 <div class='text'>
 
 <div class='top'>
-<b>Eldense -  Zaragoza</b><br>Spain &nbsp;&nbsp; LaLiga2 &nbsp;&nbsp; @ 20:30 CET
+<b>Galatasaray - Gaziantep</b><br>Turkey &nbsp;&nbsp; Super Lig &nbsp;&nbsp; @ 18:00 CET
 </div>
 
 <p class='p2'>Lines and Odds / Competition Standings</p><div class='d1'></div>
@@ -138,14 +33,14 @@ a.days:hover, a.days:active { background-color:black }
 
 <div class='links1'>
 Lines and Odds<br>
-<a class='p5' href='https://www.oddsportal.com/football/spain/laliga2/eldense-zaragoza-MXFvdE1n/#1X2;2'>In</a>
-<a class='p5' href='https://www.oddsportal.com/football/spain/laliga2/eldense-zaragoza-MXFvdE1n/#1X2;2' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/football/turkey/super-lig/galatasaray-gaziantep-6edzSc58/#1X2;2'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/turkey/super-lig/galatasaray-gaziantep-6edzSc58/#1X2;2' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Standings<br>
-<a class='p5' href='https://www.oddsportal.com/football/spain/laliga2/standings/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/football/spain/laliga2/standings/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/football/turkey/super-lig/standings/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/football/turkey/super-lig/standings/' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -158,14 +53,14 @@ Standings<br>
 
 <div class='links1'>
 Home Team<br>
-<a class='p5' href='https://www.oddsportal.com/search/results/:8WUSyF3F/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/search/results/:8WUSyF3F/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:riaqqurF/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:riaqqurF/' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Away Team<br>
-<a class='p5' href='https://www.oddsportal.com/search/results/:za7D2lO5/'>In</a>
-<a class='p5' href='https://www.oddsportal.com/search/results/:za7D2lO5/' target='_blank'>Out</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:ITkIKZ7q/'>In</a>
+<a class='p5' href='https://www.oddsportal.com/search/results/:ITkIKZ7q/' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -178,26 +73,26 @@ Away Team<br>
 
 <div class='links1'>
 H to H, Form, Streaks<br>
-<a class='p5' href='https://www.whoscored.com/Matches/1740640/Show/Spain-Segunda-Divisi%C3%B3n-2023-2024-Eldense-Real-Zaragoza'>In</a>
-<a class='p5' href='https://www.whoscored.com/Matches/1740640/Show/Spain-Segunda-Divisi%C3%B3n-2023-2024-Eldense-Real-Zaragoza' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/Show/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/Show/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 H to H Stats<br>
-<a class='p5' href='https://www.whoscored.com/Matches/1740640/Show/Spain-Segunda-Divisi%C3%B3n-2023-2024-Eldense-Real-Zaragoza'>In</a>
-<a class='p5' href='https://www.whoscored.com/Matches/1740640/Show/Spain-Segunda-Divisi%C3%B3n-2023-2024-Eldense-Real-Zaragoza' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/TeamStatistics/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/TeamStatistics/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Home T. Stats<br>
-<a class='p5' href='https://www.whoscored.com/Teams/3876/Show/Spain-Eldense'>In</a>
-<a class='p5' href='https://www.whoscored.com/Teams/3876/Show/Spain-Eldense' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Teams/294/Show/Turkey-Galatasaray'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/294/Show/Turkey-Galatasaray' target='_blank'>Out</a>
 </div>
 
 <div class='links1'>
 Away T. Stats<br>
-<a class='p5' href='https://www.whoscored.com/Teams/66/Show/Spain-Real-Zaragoza'>In</a>
-<a class='p5' href='https://www.whoscored.com/Teams/66/Show/Spain-Real-Zaragoza' target='_blank'>Out</a>
+<a class='p5' href='https://www.whoscored.com/Teams/2319/Show/Turkey-Gaziantep-FK'>In</a>
+<a class='p5' href='https://www.whoscored.com/Teams/2319/Show/Turkey-Gaziantep-FK' target='_blank'>Out</a>
 </div>
 
 <div class='clearfix'></div>
@@ -207,168 +102,57 @@ Away T. Stats<br>
 <p class='p2'>Website Previews</p><div class='d1'></div>
 
 <div class='d1'></div>
-<div class='p4'>Club Elo</div>
-
-<div class='site'>
-
-<div class='links'>
-Open in Site
-<a class='p5' href='http://clubelo.com/Eldense/Zaragoza'>In</a>
-<a class='p5' href='http://clubelo.com/Eldense/Zaragoza' target='_blank'>Out</a>
-</div>
-
-<div class='data6'>Elo Ratings
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>1447.4</td><td class='td15'>1496.3</td></tr>
-</table>
-</div>
-
-<div class='data'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>39.5</td><td class='td15'>30.1</td><td class='td15'>30.4</td></tr>
-</table>
-</div>
-
-<div class='data'>Expected Goals
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Total</td></tr>
-<tr><td class='td15'>1.29</td><td class='td15'>1.11</td><td class='td15'>2.40</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class='d4'></div>
-<div class='p4'>Soccer Rating</div>
-
-<div class='site'>
-
-<div class='links'>
-Open in Site
-<a class='p5' href='https://www.soccer-rating.com/CD-Eldense/9365/'>In</a>
-<a class='p5' href='https://www.soccer-rating.com/CD-Eldense/9365/' target='_blank'>Out</a>
-</div>
-
-<div class='data1'>Team Ratings (H/A)
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>1893.05</td><td class='td15'>1847.88</td></tr>
-</table>
-</div>
-
-<div class='data1'>Fair Odds
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>2.57</td><td class='td15'>3.33</td></tr>
-</table>
-</div>
-
-<div class='data'>Prediction
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Away</td><td class='td14'>Bet Tip</td></tr>
-<tr><td class='td15'>6/10</td><td class='td15'>1/10</td><td class='td15'>1</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class='d4'></div>
-<div class='p4'>Sofa Score</div>
-
-<div class='site'>
-
-<div class='links'>
-Open in Site
-<a class='p5' href='https://www.sofascore.ro/cd-eldense-real-zaragoza/pgbswWt#id:11390244'>In</a>
-<a class='p5' href='https://www.sofascore.ro/cd-eldense-real-zaragoza/pgbswWt#id:11390244' target='_blank'>Out</a>
-</div>
-
-<div class='data'>Predictions in %
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>27</td><td class='td15'>41</td><td class='td15'>32</td></tr>
-</table>
-</div>
-
-<div class='data2'>Voters
-<table class='tab5'>
-<tr><td class='td15'>9,730</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class='d4'></div>
+<div class='sitbor'>
 <div class='p4'>Fore Bet</div>
 
 <div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.forebet.com/en/predictions-tips-cd-eldense-real-zaragoza-1948750'>In</a>
-<a class='p5' href='https://www.forebet.com/en/predictions-tips-cd-eldense-real-zaragoza-1948750' target='_blank'>Out</a>
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-galatasaray-sk-gaziantep-bb-1954838'>In</a>
+<a class='p5' href='https://www.forebet.com/en/predictions-tips-galatasaray-sk-gaziantep-bb-1954838' target='_blank'>Out</a>
 </div>
 
 <div class='data'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>18</td><td class='td15'>42</td><td class='td15'>39</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Draw</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>60</td><td class='td2'>31</td><td class='td2'>8</td></tr>
 </table>
 </div>
 
 <div class='data'>Predictions
-<table class='tab5'>
-<tr><td class='td16'>Bet Tip</td><td class='td17'>X</td></tr>
-<tr><td class='td16'>Correct Score</td><td class='td17'>1:1</td></tr>
-<tr><td class='td16'>Avg. Goals</td><td class='td17'>2.30</td></tr>
+<table class='tab'>
+<tr><td class='td3'>Bet Tip</td><td class='td4'>1</td></tr>
+<tr><td class='td3'>Correct Score</td><td class='td4'>3:1</td></tr>
+<tr><td class='td3'>Avg. Goals</td><td class='td4'>3.08</td></tr>
 </table>
 </div>
 
 </div>
+</div>
 
 <div class='d4'></div>
-<div class='p4'>Who Scored</div>
+<div class='sitbor'>
+<div class='p4'>League Lane</div>
 
 <div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='/nodata.html'>In</a>
-<a class='p5' href='/nodata.html' target='_blank'>Out</a>
+<a class='p5' href='https://leaguelane.com/predictions/galatasaray-vs-gaziantep/'>In</a>
+<a class='p5' href='https://leaguelane.com/predictions/galatasaray-vs-gaziantep/' target='_blank'>Out</a>
 </div>
 
-<div class='data3'>Prediction
-<table class='tab5'>
-<tr><td class='td14'>Correct Score</td></tr>
-<tr><td class='td15'>-</td></tr>
+<table class='tab1'>
+<tr><td>Tip A</td><td>Tip B</td><td>Tip C</td></tr>
+<tr><td class='td5'>BTTS=Yes</td><td class='td5'>3:1</td><td class='td5'>-</td></tr>
 </table>
-</div>
 
+</div>
 </div>
 
 <div class='d4'></div>
-<div class='p4'>Win Draw Win</div>
-
-<div class='site'>
-
-<div class='links'>
-Open in Site
-<a class='p5' href='https://www.windrawwin.com/tips/spain-segunda-division/eldense-v-real-zaragoza/738528/'>In</a>
-<a class='p5' href='https://www.windrawwin.com/tips/spain-segunda-division/eldense-v-real-zaragoza/738528/' target='_blank'>Out</a>
-</div>
-
-<div class='data1'>Prediction
-<table class='tab5'>
-<tr><td class='td14'>Score</td><td class='td14'>Stake</td></tr>
-<tr><td class='td15'>0:1</td><td class='td15'>Large</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class='d4'></div>
+<div class='sitbor'>
 <div class='p4'>Pronostics Football 365</div>
 
 <div class='site'>
@@ -380,76 +164,253 @@ Open in Site
 </div>
 
 <div class='data'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>34</td><td class='td15'>40</td><td class='td15'>26</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Draw</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>74</td><td class='td2'>14</td><td class='td2'>9</td></tr>
 </table>
 </div>
 
 <div class='data5'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Over 1.5</td><td class='td14'>Over 2.5</td><td class='td14'>Over 3.5</td><td class='td14'>BTTS Yes</td></tr>
-<tr><td class='td15'>81</td><td class='td15'>46</td><td class='td15'>29</td><td class='td15'>47</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Over 1.5</td><td class='td1'>Over 2.5</td><td class='td1'>Over 3.5</td><td class='td1'>BTTS Yes</td></tr>
+<tr><td class='td2'>95</td><td class='td2'>75</td><td class='td2'>43</td><td class='td2'>50</td></tr>
 </table>
 </div>
 
 <div class='data4'>Prediction
-<table class='tab5'>
-<tr><td class='td14'>Bet Tip</td></tr>
-<tr><td class='td15'>X</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Bet Tip</td></tr>
+<tr><td class='td2'>1</td></tr>
 </table>
 </div>
 
 </div>
+</div>
 
 <div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Soccer Rating</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.soccer-rating.com/Galatasaray/1269/'>In</a>
+<a class='p5' href='https://www.soccer-rating.com/Galatasaray/1269/' target='_blank'>Out</a>
+</div>
+
+<div class='data1'>Team Ratings (H/A)
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>2296.38</td><td class='td2'>1856.79</td></tr>
+</table>
+</div>
+
+<div class='data1'>Fair Odds
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>1.23</td><td class='td2'>15.40</td></tr>
+</table>
+</div>
+
+<div class='data'>Prediction
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Away</td><td class='td1'>Bet Tip</td></tr>
+<tr><td class='td2'>6/10</td><td class='td2'>0/10</td><td class='td2'>1</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Soccer Vital</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.soccervital.com/galatasaray-vs-gaziantep-fk-soccer-prediction-jggj526g7.html'>In</a>
+<a class='p5' href='https://www.soccervital.com/galatasaray-vs-gaziantep-fk-soccer-prediction-jggj526g7.html' target='_blank'>Out</a>
+</div>
+
+<div class='data6'>Main Tip
+<table class='tab'>
+<tr><td class='td1'>Bet Tip</td><td class='td1'>Stake</td></tr>
+<tr><td class='td2'>1</td><td class='td2'>10</td></tr>
+</table>
+</div>
+
+<div class='data1'>Secondary Tips
+<table class='tab'>
+<tr><td class='td1'>Total</td><td class='td1'>Score</td></tr>
+<tr><td class='td2'>Over 2.5</td><td class='td2'>3:0</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Sofa Score</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.sofascore.ro/gaziantep-fk-galatasaray/llbsNcc#id:11450132'>In</a>
+<a class='p5' href='https://www.sofascore.ro/gaziantep-fk-galatasaray/llbsNcc#id:11450132' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Predictions in %
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Draw</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>80</td><td class='td2'>13</td><td class='td2'>7</td></tr>
+</table>
+</div>
+
+<div class='data2'>Voters
+<table class='tab'>
+<tr><td class='td2'>12,344</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
 <div class='p4'>Sports Mole</div>
 
 <div class='site'>
 
 <div class='links'>
 Open in Site
-<a class='p5' href='https://www.sportsmole.co.uk/football/segunda-division/eldense-vs-real-zaragoza_game_180059.html'>In</a>
-<a class='p5' href='https://www.sportsmole.co.uk/football/segunda-division/eldense-vs-real-zaragoza_game_180059.html' target='_blank'>Out</a>
+<a class='p5' href='https://www.sportsmole.co.uk/football/galatasaray/preview/preview-galatasaray-vs-gaziantep-prediction-team-news-lineups_535101.html'>In</a>
+<a class='p5' href='https://www.sportsmole.co.uk/football/galatasaray/preview/preview-galatasaray-vs-gaziantep-prediction-team-news-lineups_535101.html' target='_blank'>Out</a>
 </div>
 
 <div class='data'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Home</td><td class='td14'>Draw</td><td class='td14'>Away</td></tr>
-<tr><td class='td15'>30.09</td><td class='td15'>28.17</td><td class='td15'>41.74</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Draw</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>81.49</td><td class='td2'>12.2</td><td class='td2'>6.3</td></tr>
 </table>
 </div>
 
 <div class='data'>Probabilities in %
-<table class='tab5'>
-<tr><td class='td14'>Over<br>2.5</td><td class='td14'>Over<br>3.5</td><td class='td14'>BTTS<br>Yes</td></tr>
-<tr><td class='td15'>40.21</td><td class='td15'>19.92</td><td class='td15'>46.1</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Over<br>2.5</td><td class='td1'>Over<br>3.5</td><td class='td1'>BTTS<br>Yes</td></tr>
+<tr><td class='td2'>68.09</td><td class='td2'>46.54</td><td class='td2'>46.47</td></tr>
 </table>
 </div>
 
 <div class='data4'>Prediction
-<table class='tab5'>
-<tr><td class='td14'>Score</td></tr>
-<tr><td class='td15'>-</td></tr>
+<table class='tab'>
+<tr><td class='td1'>Score</td></tr>
+<tr><td class='td2'>3:0</td></tr>
 </table>
 </div>
 
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Viti Bet</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.vitibet.com/index.php?clanek=analyzy&sekce=fotbal&liga=turecko&lang=en&tab=1&zap=9'>In</a>
+<a class='p5' href='https://www.vitibet.com/index.php?clanek=analyzy&sekce=fotbal&liga=turecko&lang=en&tab=1&zap=9' target='_blank'>Out</a>
+</div>
+
+<div class='data'>Probabilities in %
+<table class='tab'>
+<tr><td class='td1'>Home</td><td class='td1'>Draw</td><td class='td1'>Away</td></tr>
+<tr><td class='td2'>66</td><td class='td2'>20</td><td class='td2'>14</td></tr>
+</table>
+</div>
+
+<div class='data4'>Prediction
+<table class='tab'>
+<tr><td class='td1'>Score</td></tr>
+<tr><td class='td2'>2:0</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Who Scored</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/Preview/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK'>In</a>
+<a class='p5' href='https://www.whoscored.com/Matches/1761457/Preview/Turkey-Super-Lig-2023-2024-Galatasaray-Gaziantep-FK' target='_blank'>Out</a>
+</div>
+
+<div class='data3'>Prediction
+<table class='tab'>
+<tr><td class='td1'>Correct Score</td></tr>
+<tr><td class='td2'>2:0</td></tr>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class='d4'></div>
+<div class='sitbor'>
+<div class='p4'>Win Draw Win</div>
+
+<div class='site'>
+
+<div class='links'>
+Open in Site
+<a class='p5' href='https://www.windrawwin.com/tips/turkey-super-lig/galatasaray-v-gaziantep-bb/748655/'>In</a>
+<a class='p5' href='https://www.windrawwin.com/tips/turkey-super-lig/galatasaray-v-gaziantep-bb/748655/' target='_blank'>Out</a>
+</div>
+
+<div class='data1'>Prediction
+<table class='tab'>
+<tr><td class='td1'>Score</td><td class='td1'>Stake</td></tr>
+<tr><td class='td2'>2:0</td><td class='td2'>Medium</td></tr>
+</table>
+</div>
+
+</div>
 </div>
 
 <div class='d4'></div>
 <p class='sm'>Click on any 'Open in Site' button to see the analysis of this match in more detail and the write-up (if any) in that particular website.
 The <b>'In' button</b> will open the site in the same window of the browser and the <b>'Out' button</b> will open the site in a new window in the browser.</p>
 
-</div>
-
-<div class='footer'>
-<a href='/legal/terms.html'>Terms/Conditions</a> <a href='/legal/privacy.html'>Privacy</a>
-<a href='/legal/cookies.html'>Cookies</a> <a href='/legal/disclaimer.html'>Disclaimer</a><br>
-<a href='#' id='open_preferences_center'>Update cookies preferences</a>
 <div class='d1'></div>
-<div class='copy'>&copy; 2024 &nbsp;&nbsp;Match In Focus</div>
+<p class='p2'>Lineups / Players / Missing Players</p>
+
+<iframe class='if' a href='/nodata.html' frameborder='0' scrolling='no'></iframe>
+
+<p class='sm'>Click on any player's name to see details about the player.<br>
+Click on the orange 'Possible lineups' to see the most up to date possible lineups and the players who may be missing in this match.</p>
+
 </div>
 
-<div class='hb1'><a href='/index.html'>Back</a></div>
+<div class='footer'><div class='infooter'>
+<a href='/legal/terms.html'>Terms/Conditions</a> 
+<a href='/legal/privacy.html'>Privacy</a>
+<a href='/legal/cookies.html'>Cookies</a>
+<a href='/legal/disclaimer.html'>Disclaimer</a><br>
+<a href='#' id='open_preferences_center'>Update cookies preferences</a>
+<div class='d1'></div><div class='copy'>&copy; 2024 &nbsp;&nbsp;Match In Focus</div></div></div>
+
+<div class='hb1'><a href='index.html'>Back</a></div>
 </body>
-<html/>
+</html>
