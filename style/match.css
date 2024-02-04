@@ -42,8 +42,8 @@ body { font-family:Arial, Helvetica, sans-serif; font-size:16px; background-colo
 .p5 { width:45px; text-align:center; margin-top:-3px; padding:2px 0 0 0; border-radius:8px }
 a.p5:link, a.p5:visited { background-color:green; color:white; text-decoration:none; display:inline-block }
 a.p5:hover, a.p5:active { background-color:black }
-.single { display:inline-block; width:227px; margin:11px 5px 0 5px; padding:2px 8px; border:2px solid #FFCC99; border-radius:8px }
-.single_b { max-width:466px; margin:11px auto 0 auto; padding:2px 0; border:2px solid #FFCC99; border-radius:8px }
+.single { display:inline-block; width:227px; background-color:#D3D3D3; margin:11px 5px 0 5px; padding:2px 8px; border:2px solid #FFCC99; border-radius:8px }
+.single_b { max-width:466px; background-color:#D3D3D3; margin:11px auto 0 auto; padding:2px 0; border:2px solid #FFCC99; border-radius:8px }
 .single:hover, .single_b:hover { background-color:#FFE5B4 }
 .site { text-align:center; margin:auto }
 .site1 { max-width:334px; text-align:center; margin:-15px auto 6px auto }
