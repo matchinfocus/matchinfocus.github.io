@@ -11,18 +11,17 @@
 <link type="text/css" rel="stylesheet" href="/style/home.css">
 <style>
 </style>
+
+          <script>
+         window.onload = function() {
+            var iframe = document.getElementById("myiframe");
+            iframe.width = iframe.contentWindow.document.body.scrollWidth;
+            iframe.height = iframe.contentWindow.document.body.scrollHeight;
+         }
+      </script>
+    
 </head>
 <body>
-
-    <script>
-    // Selecting the iframe element
-    var iframe = document.getElementById("Ifr");
-    
-    // Adjusting the iframe height onload event
-    iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    }
-    </script>
 
 <div class='top1'><table class='tabtop'>
 <tr><td><img class='img' src='https://live.staticflickr.com/65535/53450641051_d0108ffc41_w.jpg' /></td>
@@ -30,7 +29,7 @@
 <td><img class='img' src='https://live.staticflickr.com/65535/53450641041_b6266e9c82_w.jpg' /></td></tr></table></div>
 
 <div style='max-width:700px; margin:auto; text-align:center'>    
-<iframe src='https://matchinfocus.github.io/match6.html' id="Ifr" scroll='no' style='border:none; width:100%'></iframe>
+<iframe src='https://matchinfocus.github.io/match6.html' id="myiframe" scroll='no' style='border:none; width:100%'></iframe>
 </div>
     
 <div class='old'>
